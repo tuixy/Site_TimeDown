@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <h1>Page d'administration</h1>
+    
+    <!-- Modifier le texte d'introduction -->
+    <form action="{{ url_for('admin') }}" method="post">
+        <h2>Modifier le texte d'introduction</h2>
+        <textarea name="new_intro_text" rows="5">{{ intro_text }}</textarea>
+        <button type="submit" name="action" value="update_text">Mettre à jour le texte</button>
+    </form>
+    
+    <!-- Télécharger une nouvelle image -->
+    <form action="{{ url_for('admin') }}" method="post" enctype="multipart/form-data">
+        <h2>Télécharger une nouvelle image</h2>
+        <input type="file" name="file" accept="image/*">
+        <button type="submit" name="action" value="upload_image">Télécharger l'image</button>
+    </form>
+
+    <!-- Supprimer une image -->
+    <h2>Supprimer une image</h2>
+    <form action="{{ url_for('admin') }}" method="post">
+        <select name="filename">
+            {% for image in images %}
+                <option value="{{ image }}">{{ image }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" name="action" value="delete_image">Supprimer l'image</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Down - Le jeu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .nav_bar {
+            background-color: #333;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav_bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            max-height: 400px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            z-index: 10;
+        }
+        .prev {
+            left: -50px;
+        }
+        .next {
+            right: -50px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .prev::after, .next::after {
+            content: '';
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 3.5em; /* Augmente la taille du texte */
+            font-weight: bold; /* Met le texte en gras */
+            margin-top: 20px;
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .intro {
+            margin: 20px;
+            padding: 20px;
+        }
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .features li {
+            background-color: #3498db;
+            color: white;
+            margin: 2% 0;
+            padding: 2%;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 1.2em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .nav_bar {
+            background-color: #333;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav_bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        .barre_bouton {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+        .barre_bouton div {
+            text-align: center;
+        }
+        .barre_bouton img {
+            max-width: 50px;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        div {
+            margin: 20px;
+        }
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-section div {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav_bar">
+        <div class="barre_bouton">
+            <a href="{{ url_for('home_page') }}">Accueil</a>
+            <a href="{{ url_for('contact_page') }}">Contact</a>
+        </div>
+    </div>
+    <h1>Contactez-nous</h1>
+    <div class="contact-section">
+        <div>
+            <h2>Par Mail :</h2>
+            <p>gmail@gmail.com</p>
+        </div>
+        <div>
+            <h2>Sur Discord :</h2>
+            <p><a href="https://discord.gg/XC3awXyzyw" style="color: black;">TimeDown_Officiel (cliquez ici)</a></p>
+        </div>
+        <div>
+            <h2>Sur nos réseaux :</h2>
+            <p><a href="https://www.youtube.com/@Tuixy_bs" style="color: black;">Sur Youtube (cliquez ici)</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Time Down. Tous droits réservés.</p>
+        <a href="login.html" style="color: white;">Administration</a>
+    </footer>
+</head>
+</body>
+</html>
